@@ -98,7 +98,7 @@ Navigator.pushReplacement(
 - `Stack`: digunakan untuk menumpuk widget di atas satu sama lain.
 
 ## Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
-Elemen input yang digunakan pada form yang dipakai pada tugas ini adalah `TextFormField` yang digunakan untuk membuat kolom input teks yang dapat menerima masukan dari pengguna. Elemen input ini digunakan karena saya memerlukan input dari pengguna yang berupa teks. Elemen input ini juga memungkinkan penggunaan fungsi validator untuk memastikan apakah input dari pengguna sudah diisi dan sesuai.s
+Elemen input yang digunakan pada form yang dipakai pada tugas ini adalah `TextFormField` yang digunakan untuk membuat kolom input teks yang dapat menerima masukan dari pengguna. Elemen input ini digunakan karena saya memerlukan input dari pengguna yang berupa teks. Elemen input ini juga memungkinkan penggunaan fungsi validator untuk memastikan apakah input dari pengguna sudah diisi dan sesuai.
 
 ## Bagaimana penerapan clean architecture pada aplikasi Flutter?
 `Clean Architecture` adalah pola atau struktur yang memisahkan lapisan data, lapisan domain, dan lapisan presentasi sehingga menjadi lebih mudah untuk memodifikasi kode sehingga lebih terorganisir. 
