@@ -67,4 +67,59 @@ Membuat Snackbar dengan menambahkan kode berikut:
     ...
 ```
 
- </details>
+</details>
+
+<details>
+<summary>TUGAS 8</summary>
+
+## Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+- `Navigator.push()`: Metode push() akan push() akan menambahkan route baru diatas route yang sudah ada pada atas stack. Contoh penggunaannya adalah saat back ke halaman yang sebelumnya.
+```
+Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => Menu()),
+  );
+```
+
+- `Navigator.pushReplacement()`: Metode pushReplacement() menggantikan route yang sudah ada pada atas stack dengan route baru tersebut. Contoh penggunaannya adalah saat login dan masuk ke halaman lain.
+```
+Navigator.pushReplacement(
+  context,
+  MaterialPageRoute(builder: (context) => Home()),
+  );
+```
+ 
+## Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+- `Column`: digunakan untuk menampilkan widget dalam satu kolom atau secara vertikal.
+- `Row`: digunakan untuk menampilkan widget dalam satu baris atau secara horizontal.
+- `Center`: digunakan untuk memposisikan dan menampilkan widget di tengah.
+- `GridView`: digunakan untuk menampilkan widget dengan bentuk grid / kotak.
+- `ListView`: digunakan untuk membuat suatu daftar yang dapat discroll.
+- `Stack`: digunakan untuk menumpuk widget di atas satu sama lain.
+
+## Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+Elemen input yang digunakan pada form yang dipakai pada tugas ini adalah `TextFormField` yang digunakan untuk membuat kolom input teks yang dapat menerima masukan dari pengguna. Elemen input ini digunakan karena saya memerlukan input dari pengguna yang berupa teks. Elemen input ini juga memungkinkan penggunaan fungsi validator untuk memastikan apakah input dari pengguna sudah diisi dan sesuai.s
+
+## Bagaimana penerapan clean architecture pada aplikasi Flutter?
+`Clean Architecture` adalah pola atau struktur yang memisahkan lapisan data, lapisan domain, dan lapisan presentasi sehingga menjadi lebih mudah untuk memodifikasi kode sehingga lebih terorganisir. 
+
+Clean Architecture pada Flutter memisahkan code menjadi beberapa bagian:
+- `Lapisan Data`: Lapisan ini bertanggung jawab atas pengambilan dan penyimpanan data, seperti repositori, penyimpanan lokal, dan basis data.
+- `Lapisan Domain`: Lapisan ini berisi logika bisnis dan akan mengelola logika bisnis.
+- `Lapisan Presentasi`: Lapisan ini mengatur komponen interface, seperti widget dalam menampilkan UI.
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! 
+- Membuat berkas baru dengan nama `left_drawer.dart` di dalam direktori baru `widgets` dan membuat drawer yang memiliki dua buah opsi, yaitu `Halaman Utama` dan `Tambah Item`
+- Mengimpor widget drawer yang sudah dibuat pada berkas `menu.dart`
+- Membuat berkas baru `booklist_form.dart` untuk halaman form 
+- Membuat variabel baru bernama `_formKey` untuk handler dari form state, validasi form, dan penyimpanan form. Setelah itu, menambahkan `_formKey` ke dalam atribut `key` pada widget `Form`
+- Mengisi widget `Form` dengan field dengan variabel _name, _amount dan _description
+- Membuat widget `Column` sebagai child dari `SingleChildScrollView`
+- Membuat widget `TextFormField` yang dibungkus oleh `Padding` yang merupakan children dari widget `Column` yang memiliki tiga elemen input, yaitu name, amount, dan description
+- Menambahkan `validator` untuk validasi input tidak boleh kosong
+- Menambahkan tombol yang dibungkus `Padding` serta `Align` yang merupakan child dari `Column` untuk membuat `pop-up` setelah menekan tombol `Save` pada halaman form tambah item baru. 
+- Menambahkan fungsi `showDialog()` di bagian `onPressed()`
+- Memunculkan `AlertDialog` dan menambahkan fungsi untuk reset form 
+- Membuat berkas baru yang bernama `book_card.dart` pada direktori `widgets`. Lalu memindahkan isi widget `BookItem` pada `menu.dart` berkas `book_card.cart`
+
+</details>
