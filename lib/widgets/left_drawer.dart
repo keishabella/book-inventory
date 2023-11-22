@@ -1,3 +1,4 @@
+import 'package:book_inventory/screens/list_product.dart';
 import 'package:flutter/material.dart';
 import 'package:book_inventory/screens/menu.dart';
 import 'package:book_inventory/screens/booklist_form.dart'; // Impor halaman BookFormPage jika sudah dibuat
@@ -60,6 +61,17 @@ class LeftDrawer extends StatelessWidget {
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => BookFormPage()));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Produk'),
+            onTap: () {
+              // Route menu ke halaman produk
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProductPage()),
+              );
             },
           ),
         ],
